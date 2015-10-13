@@ -1,0 +1,48 @@
+# Most of the commens here are taken from:
+# https://developers.google.com/appengine/docs/python/config/appconfig
+runtime: python27
+api_version: 1
+threadsafe: true
+
+# Replace 'your-app-id-goes-here' with your project/app ID.
+# Get it here if you don't have one: https://console.developers.google.com
+application: atlantean-force-90113
+version: social-login-3
+
+# Defaul expiration time for static assets.
+default_expiration: "30d"
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+- name: webob
+  version: "1.2.3"
+- name: markupsafe
+  version: "0.15"
+- name: setuptools
+  version: "0.6c11"
+- name: jinja2
+  version: "2.6"
+- name: lxml
+  version: "2.3"
+
+handlers:
+
+# static content handlers
+- url: /(favicon\.ico)
+  mime_type: image/png
+  static_files: static/\1
+  upload: static/favicon\.ico
+
+- url: /(robots\.txt)
+  static_files: static/\1
+  upload: static/robots\.txt
+
+- url: /(img|css|js|scss)/(.*)
+  static_files: static/\1/\2
+  upload: static/(img|css|js|scss)/(.*)
+
+# dynamic handlers
+- url: /.*
+  script: main.app
+  secure: always
