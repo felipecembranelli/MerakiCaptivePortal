@@ -5,11 +5,11 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /rest/.*
+- url: /api/.*
   script: main.app
 
 - url: (.*)/
-  static_files: app\1/index_2.html
+  static_files: app\1/index.html
   upload: app
   login: required
 
@@ -24,8 +24,7 @@ handlers:
   static_dir: app/css/img
 
 libraries:
-- name: MySQLdb
-  version: "latest"
-
 - name: ssl
   version: "latest"
+- name: webapp2
+  version: latest

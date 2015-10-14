@@ -4,11 +4,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
-                    Dashboard
+                    Visitors
                 </h1>
                 <ol class="breadcrumb">
                     <li>
-                        <i class="fa fa-dashboard"></i>  <a href="/">Dashboard</a>
+                        <i class="fa fa-dashboard"></i>  <a href="/">User Detail</a>
                     </li>
                     <li class="active">
                         <i class="fa fa-bar-chart-o"></i> Overview
@@ -20,18 +20,17 @@
 
        <div class="row">
 
-                    <div ng-repeat="ca in campaigns">
-                        <div class="col-sm-3">
+                    <div ng-repeat="u in users">
+                        <div class="col-sm-6">
                         <div class="panel panel-red">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i><a ng-click="viewDetail(ca.campaignId)">  Campaign {{ca.name}}</a></h3>
+                                <h3 class="panel-title">{{u.name}}</h3>
                             </div>
                             <div class="panel-body">
-                                <p><b>Hashtags:</b> {{ca.hashTags}}</p>
-                                <p><b>Status:</b> {{ca.status}}</p>
-                                <p><b>Created At:</b> {{ca.createAt}}</p>
-                                <p><b># Tweets:</b> {{ca.totalTweets}}</p>
-                                <p><b># Replies:</b> {{ca.totalReplies}}</p>
+                                <p><img src="{{u.avatar_url}}"></p>
+                                <p><b>Auth Ids:</b> {{u.auth_ids}}</p>
+                                <p><b>Created:</b> {{u.created}}</p>
+                                <p><b>Updated:</b> {{u.updated}}</p>
                             </div>
                         </div>
                     </div>

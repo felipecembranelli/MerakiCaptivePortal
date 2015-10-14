@@ -13,8 +13,8 @@ GOOGLE_APP_ID = 'client id'
 GOOGLE_APP_SECRET = 'client secret'
 
 # Facebook auth apis
-FACEBOOK_APP_ID = '857871454332801'
-FACEBOOK_APP_SECRET = '3a77dafe15b27fc03565169199aa4b2c'
+FACEBOOK_APP_ID = '859883500798263'
+FACEBOOK_APP_SECRET = '0f9c152de1d6c524352182c7f61842a9'
 
 
 # Key/secret for both LinkedIn OAuth 1.0a and OAuth 2.0

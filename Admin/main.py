@@ -6,8 +6,7 @@
 #******************************************************************************
 
 import webapp2
-from handlers.socialPromoHandler import *
-from handlers.campaignHandler import *
+from handlers.captivePortalHandler import *
 from handlers.logHandler import *
 
 #******************************************************************************
@@ -15,11 +14,6 @@ from handlers.logHandler import *
 #******************************************************************************
 
 app = webapp2.WSGIApplication([
-    ('/rest/SocialPromoQueue', SocialPromoQueue),
-    ('/rest/SocialPromoWorker', SocialPromoWorker),
-    ('/rest/campaignQueryHandler', campaignQueryHandler),
-    ('/rest/campaignCreateHandler', campaignCreateHandler),
-    ('/rest/campaignDetailQueryHandler', campaignDetailQueryHandler),
-    ('/rest/tweetsByCampaignIdHandler', tweetsByCampaignIdHandler),
-    ('/rest/logHandler', logHandler)
+    ('/api/captivePortalHandler', captivePortalHandler),
+    ('/api/logHandler', logHandler)
     ],debug=True)
