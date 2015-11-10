@@ -8,7 +8,7 @@ Captive portal sample application written using Python / GAE
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## Referências
+## References
 I used the click-through authorization method, described on the Meraki's documentation.
 
 ## Solution Overview
