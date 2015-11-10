@@ -17,7 +17,7 @@ The solution is composed by two modules:
 
 ### Splash Page
 
-Web application written using Python and hosted on GAE. It has one authentication screen and a authorization mechanism:
+Web application written using Python and hosted on GAE. It has one authentication screen and an authorization mechanism:
 
 ![](https://github.com/felipecembranelli/MerakiCaptivePortal/blob/master/Screenshots/tela1.PNG)
 
